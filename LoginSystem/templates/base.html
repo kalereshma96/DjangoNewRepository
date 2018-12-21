@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <title>{% block title %}Login System using Django{% endblock %} </title>
+</head>
+<body style="background-color:#ffffff">
+  <header><center>
+      <h1 style="color:#065180;">Django Login System</h1>
+      <center>{% if user.is_authenticated %}
+          {% if user.is_superuser %}
+          Hi Admin! Welcome to this login application!</center>
+      <center> <h3 style="color:blue;margin-left:30px;"><a href="{% url 'signup' %}">Add user</a> </h3> </center>
+      {% else %}
+        Hi {{ user.username }} ! You have benn added by the admin! </center>
+        <H3><center> <a href="{% url 'login' %}">LOGIN</a></center></H3>
+        <center><a href="{% url 'logout' %}">LOGOUT</a> </center>
+
+      <p> </p>
+      {% endif %}
+      {% endif %}
+
+
+  </header>
+  <hr>
+ <main>
+     {% block content %}
+     {% endblock %}
+ </main>
+<hr>
+
+</body>
+</html>
