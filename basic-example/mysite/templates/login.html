@@ -1,7 +1,12 @@
+<!-- In this login page, if users are authenticated then they are able to
+     login. That is if they are new to site they have to sign up first
+     otherwise they will get error msg i.e Your username and password
+     didn't match. Please try again. -->
+
 {% extends 'base.html' %}
 
 {% block content %}
-<body background="/home/admin1/Downloads/im.jpg"></body>
+ <body background="/home/admin1/Downloads/im.jpg"></body>
 
   <h2>Log in to My Site</h2>
   {% if form.errors %}

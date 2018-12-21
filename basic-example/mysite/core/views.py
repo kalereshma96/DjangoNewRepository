@@ -6,10 +6,23 @@ from django.shortcuts import render, redirect
 
 @login_required
 def home(request):
+    """
+
+        :param request:
+        :return:  user request goes to home page
+         after login or register.
+        """
     return render(request, 'home.html')
 
 
 def signup(request):
+    """
+        In this function user need to enter their
+        information like username, password, email
+        etc.
+       :param request:
+       :return:
+       """
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():

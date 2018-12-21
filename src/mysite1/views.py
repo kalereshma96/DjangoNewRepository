@@ -9,10 +9,23 @@ from .forms import UserRegistrationForm
 
 # Create your views here.
 def home(request):
+    """
+
+    :param request:
+    :return:  user request goes to home page
+     after login or register.
+    """
     return render(request, 'mysite/home.html')
 
 
 def register(request):
+    """
+     In this function user need to enter their
+     information like username, password, email
+     etc.
+    :param request:
+    :return:
+    """
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
