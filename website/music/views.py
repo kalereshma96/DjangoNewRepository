@@ -72,6 +72,7 @@ class DetailView(generic.DetailView):
     model = Album
     template_name = 'music/detail.html'
 
+
 class AlbumCreate(CreateView):
 
     model = Album
