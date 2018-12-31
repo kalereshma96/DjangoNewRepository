@@ -13,7 +13,7 @@ def register(request):
         form = UseRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get('username')
+            username=form.cleaned_data.get('username')
             messages.success(request, f'Your Account has been created..!!You are now able to login')
             return redirect('login')
     else:
@@ -32,7 +32,7 @@ def profile(request):
         p_form = ProfileUpdateForm(instance=request.user.profile)
 
     context = {
-        'u_form': u_form,
-        'p_form': p_form
+        'u_form' : u_form,
+        'p_form' : p_form
     }
     return render(request,'users/profile.html', context)

@@ -129,7 +129,7 @@ $(function () {
           'false': false
         }[paramValue.toLowerCase()]
         if (value !== undefined) {
-          params[paramKey] = value
+          params[paramKey]
         }
       } else if (dataType === 'array' && paramValue) {
         try {
