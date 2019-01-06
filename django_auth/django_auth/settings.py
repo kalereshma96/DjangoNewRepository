@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'django_auth.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'auth',
-        'USER': 'django_auth',
-        'PASSWORD': 'asdfgh',
+        'NAME': 'abcauth',
+        'USER': 'admin_role',
+        'PASSWORD': 'admin123',
         'HOST': 'localhost',
         'PORT': '',
     }
