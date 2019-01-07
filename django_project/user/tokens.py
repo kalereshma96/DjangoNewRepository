@@ -1,3 +1,5 @@
+# Here account validation token is genrated.
+
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.utils import six
 

@@ -1,3 +1,5 @@
+# Here user can update their profile.
+
 from django.db import models
 from django.contrib.auth.models import User
 # from PIL import Image

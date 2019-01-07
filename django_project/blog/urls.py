@@ -1,3 +1,9 @@
+# In this url section we can navigate
+# to different url or go to different path
+# after defining their path.
+
+
+
 from django.urls import path
 from .views import (
     PostListView,

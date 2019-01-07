@@ -12,8 +12,17 @@ from django.template.loader import render_to_string
 from .tokens import account_activation_token
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from rest_framework_jwt.settings import api_settings
 
-
+"""
+            In this registration form user can register 
+            their self,after that they need to verify 
+            their account by clicking the activation
+            link sent to their particular account.
+    """
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -67,7 +76,59 @@ def profile(request):
 
     return render(request, 'user/profile.html', context)
 
+
+def get_jwt_token(user):
+    jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+    jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+
+    payload = jwt_payload_handler(user)
+    print(payload)
+    return jwt_encode_handler(payload)
+
+
+def login1(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user:
+            if user.is_active:
+                login(request, user)
+                data = get_jwt_token(user)
+                # return HttpResponse(data)
+                myToken = get_jwt_token(user)
+                print(myToken)
+                myUrl = '/profile'
+                # head = {'Authorization': 'token {}'.format(myToken)}
+                headers = {'Content-Type': 'application/json'}
+                # response = requests.post(myUrl, headers=head)
+                response = redirect(myUrl)
+                response['Token'] = data
+                # requests.get("Content-Type", "application/json")
+                # print(response)
+                # return HttpResponse(data)
+                return response
+                # return HttpResponseRedirect('/profile')
+                return render(request, 'users/profile.html', context)
+
+            else:
+                return HttpResponse("Your account was inactive.")
+
+        else:
+            print("Someone tried to login and failed.")
+            print("They used username: {} and password: {}".format(username, password))
+            return HttpResponse("Invalid login details given")
+    else:
+        return render(request, 'user/login.html', {})
+
+
 def activate(request, uidb64, token):
+    """
+
+    :rtype: check user id ,if user id is not none
+            send account activation link to their
+            particular account.
+    """
     try:
         uid = force_text(urlsafe_base64_decode(uidb64))
         user = User.objects.get(pk=uid)

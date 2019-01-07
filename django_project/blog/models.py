@@ -1,3 +1,6 @@
+# This model contains information about Fandoo
+# notes.like title, content, date posted and
+# author of that post.
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
