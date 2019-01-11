@@ -9,3 +9,8 @@ $(document).ready(function(){
 
 });
 
+$(document).ready(function(){
+    $("#myModal").click('shown.bs.modal', function(){
+        $(this).find('input[type="text"]').toggle();
+    });
+});
