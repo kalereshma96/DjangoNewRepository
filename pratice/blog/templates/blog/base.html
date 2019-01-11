@@ -6,118 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>fundooNotes</title>
-      <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-
-    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
-
-    <!--&lt;!&ndash; Bootstrap core CSS &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <!-- Latest compiled and minified CSS -->
 
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{% static 'blog/main1.js' %}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+    <script type="text/javascript" src="{% static 'blog/main1.js' %}"></script>
+
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 </head>
 <body>
-
-<!------ Include the above in your HEAD tag ---------->
-<header class="header" role="banner" >
 <div id="wrapper">
-
     <nav class="navbar navbar navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        			<span class="sr-only">Toggle navigation</span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<!--<span class="icon-bar"></span>-->
-    			</button>
-
+      <div class="container-fluid">
+         <div class="navbar-header">
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
                 <div  class="navbar-brand">
                     <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
-                         <a class="navbar-brand" href="#">
-                          <img src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" width="40" height="40" class="d-inline-block align-top" alt="" align="left" hspace="40" style="margin-top:-25px">
-                         </a>
+                        <a id="fundoo-img" class="navbar-brand" href="#">
+                   <img src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" width="40" height="40" class="d-inline-block align-top" alt="" align="left" hspace="35">
+                     </a>
+
                         <i class="fa fa-bars"></i>
                     </a>
-    				<!--<a href="#">fundooNotes</a>-->
-                     <ul class="nav navbar-nav">
-                              <a class="nav-link" href="#"><h3 class="fundooTitle">fundooNotes</h3><span class="sr-only">(current)</span></a>
-                     </ul>
+                    <a id="fundootitle" href="#">fundooNotes</a>
                 </div>
-			</div>
-
-			<!--<div id="navbar" class="collapse navbar-collapse">-->
-				<!--<ul class="nav navbar-nav">-->
-					<!--<li class="active"><a href="#">Home</a></li>-->
-					<!--<li><a href="#about">About</a></li>-->
-				<!--</ul>-->
-			<!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
-             <form class="navbar-form navbar-left">
+         </div>
+            <form class="navbar-form navbar-left">
                   <div class="form-group">
                         <!--<input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">-->
-                          <input class="form-control input-lg" class="glyphicon glyphicon-search" id="inputlg" type="text" type="search" placeholder="Search" aria-label="Search">
+                          <input class="form-control input-lg" id="inputlg" type="text" type="search" placeholder="Search" aria-label="Search">
 
                   </div>
-                <div role="button" class="btn "><span class="glyphicon glyphicon-repeat"></span></div>
-                <div role="button" class="btn "><span class="glyphicon glyphicon-th-large"></span></div>
-                <div role="button" class="btn "><span class="glyphicon glyphicon-cog"></span></div>
-                <div role="button" class="btn "  style="margin-left:25px "><span class="glyphicon glyphicon-th"></span></div>
-                <div role="button" class="btn "><span class="glyphicon glyphicon-bell"></span></div>
-                <div role="button" class="btn "><span class="glyphicon glyphicon-user"></span></div>
-
+                  <button type="button" class="btn "><span class="glyphicon glyphicon-repeat"></span> </button>
+                  <button type="button" class="btn "><span class="glyphicon glyphicon-th-large"></span> </button>
+                  <button type="button" class="btn "><span class="glyphicon glyphicon-cog"></span> </button>
+                  <button type="button" class="btn "style="margin-left: 24px;"><span class="glyphicon glyphicon-th"></span> </button>
+                  <button type="button" class="btn "><span class="glyphicon glyphicon-bell"></span> </button>
+                   <button type="button" class="btn "><span class=" glyphicon glyphicon-user"></span> </button>
 
 
 
             </form>
 
-		</div>
-	</nav>
+         <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
 
+
+            </ul>
+         </div><!--/.nav-collapse -->
+      </div>
+   </nav>
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <nav id="spy">
             <ul class="sidebar-nav nav">
-                <!--<li class="sidebar-brand">-->
-                    <!--<a href="#home"><span class="fa fa-home solo">Home</span></a>-->
-                <!--</li>-->
-                <li>
-                    <a href="#anch1">
-                        <div id="glyphicon glyphicon-tasks" class="glyphicon glyphicon-tasks"></div>
-                        <span class="fa fa-anchor solo" id="notes"><font face="Arial"><b>Notes</b></font></span>
-                    </a>
-                </li>
-                <li>
 
-                    <a href="#anch2">
-                            <div id="glyphicon glyphicon-bell" class="glyphicon glyphicon-bell"></div>
-                            <span class="fa fa-anchor solo" ><font face="Arial"><b>Remainder</b></font></span>
-
+                <li>
+                    <a href="#Notes">
+                        <span  class="glyphicon glyphicon-list-alt"></span>
+                        <span class="fa fa-anchor solo"><b>Notes</b></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#anch3">
-                          <div id="glyphicon glyphicon-pencil" class="glyphicon glyphicon-pencil"></div>
-                        <span class="fa fa-anchor solo"><font face="Arial"><b> Edit labels</b></font></span>
+                    <a href="#Remainders">
+                        <span  class="glyphicon glyphicon-bell"></span>
+                        <span class="fa fa-anchor solo"><b>Remainders</b></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#anch4">
-                        <div id="glyphicon glyphicon-download-alt" class="glyphicon glyphicon-download-alt"></div>
-                        <span class="fa fa-anchor solo"><font face="Arial"><b>Archive</b></font></span>
+                    <a href="#lable">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <span class="fa fa-anchor solo"><b>Edit labels</b></span>
                     </a>
                 </li>
                 <li>
-                    <a href="#anch5">
-                        <div id="glyphicon glyphicon-trash" class="glyphicon glyphicon-trash"></div>
-                        <span class="fa fa-anchor solo"><font face="Arial"><b>Bin</b></span>
+                    <a href="#Archive">
+                        <span class="glyphicon glyphicon-save"></span>
+                        <span class="fa fa-anchor solo"><b>Archive</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Bin">
+                        <span class="glyphicon glyphicon-trash"></span>
+                        <span class="fa fa-anchor solo"><b>Bin</b></span>
                     </a>
                 </li>
             </ul>
@@ -131,25 +122,33 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="panel panel-danger">
-                            <div class="panel-heading">
-                                    Panel 1
-                            </div>
-                            <div class="panel-body">
-                                content body
-                            </div>
-                        </div>
+                        <!--<div class="panel panel-danger">-->
+                            <!--<div class="panel-heading">-->
+                                    <!--Panel 1-->
+                            <!--</div>-->
+                              <div class="form-group">
+
+                                <input class="form-control input-md"  id="inputmd" type="text"  placeholder="Take a note..." aria-label="Search">
+                                 <div role="button" class="btn " style="margin: -36px; margin-left: 575px"><span class="glyphicon glyphicon-ok-circle"></span></div>
+                                 <div role="button" class="btn " style="margin: -36px; margin-left: 612px"><span class="glyphicon glyphicon-pencil"></span></div>
+                                  <div role="button" class="btn " style="margin: -37px; margin-left: 650px"><span class="glyphicon glyphicon-picture"></span></div>
+
+                             </div>
+                            <!--<div class="panel-body">-->
+                                <!--content body-->
+                            <!--</div>-->
+                        <!--</div>-->
                     </div>
-                    <div class="col-md-6">
-                        <div class="panel panel-success">
-                            <div class="panel-heading">
-                                    Panel 1
-                            </div>
-                            <div class="panel-body">
-                                content body
-                            </div>
-                        </div>
-                    </div>
+                    <!--<div class="col-md-6">-->
+                        <!--<div class="panel panel-success">-->
+                            <!--<div class="panel-heading">-->
+                                    <!--Panel 1-->
+                            <!--</div>-->
+                            <!--<div class="panel-body">-->
+                                <!--content body-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
             </div>
         </div>
@@ -171,3 +170,5 @@
 
 </body>
 </html>
+
+
