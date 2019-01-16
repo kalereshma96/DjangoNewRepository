@@ -1,0 +1,225 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fundooNotes</title>
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+    <script type="text/javascript" src="{% static 'blog/main1.js' %}"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+         <div class="navbar-header">
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+                <div  class="navbar-brand">
+                    <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
+                        <a id="fundoo-img" class="navbar-brand" href="#">
+                   <img src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" width="40" height="40" class="d-inline-block align-top" alt="" align="left" hspace="35">
+                     </a>
+
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <a id="fundootitle" href="#">fundooNotes</a>
+                </div>
+         </div>
+            <form class="navbar-form navbar-left">
+                  <div class="form-group">
+                        <!--<input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">-->
+                          <input class="form-control input-lg" id="inputlg" type="text" type="search" placeholder="Search" aria-label="Search">
+
+                  </div>
+                  <button type="button" class="btn "><span class="glyphicon glyphicon-repeat"></span> </button>
+                  <button type="button" class="btn "><span class="glyphicon glyphicon-th-large"></span> </button>
+                  <button type="button" class="btn "><span class="glyphicon glyphicon-cog"></span> </button>
+                  <button type="button" class="btn "style="margin-left: 24px;"><span class="glyphicon glyphicon-th"></span> </button>
+                  <button type="button" class="btn "><span class="glyphicon glyphicon-bell"></span> </button>
+                   <button type="button" class="btn "><span class=" glyphicon glyphicon-user"></span> </button>
+
+
+
+            </form>
+
+         <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+
+            </ul>
+         </div><!--/.nav-collapse -->
+      </div>
+   </nav>
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <nav id="spy">
+            <ul class="sidebar-nav nav">
+
+                <li>
+                    <a href="#Notes">
+                        <span  class="glyphicon glyphicon-list-alt"></span>
+                        <span class="fa fa-anchor solo"><b>Notes</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Remainders">
+                        <span  class="glyphicon glyphicon-bell"></span>
+                        <span class="fa fa-anchor solo"><b>Remainders</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#lable">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <span class="fa fa-anchor solo"><b>Edit labels</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Archive">
+                        <span class="glyphicon glyphicon-save"></span>
+                        <span class="fa fa-anchor solo"><b>Archive</b></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Bin">
+                        <span class="glyphicon glyphicon-trash"></span>
+                        <span class="fa fa-anchor solo"><b>Bin</b></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+     <!--Page content-->
+    <div contenteditable="true" aria-multiline="true" role="textbox" aria-label="Note" class="notranslate IZ65Hb-YPqjbf h1U9Be-YPqjbf" tabindex="0"></div>
+    <div id="page-content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--<div class="panel panel-danger">-->
+                            <!--<div class="panel-heading">-->
+                                    <!--Panel 1-->
+                            <!--</div>-->
+                          <div class="bs-example">
+                              <div class="form-group">
+                                  <!--<a href="#myModal" input class="form-control input-md"  id="inputmd" type="text"  placeholder="Take a note..." aria-label="Search" data-toggle="modal"></a>-->
+                             <div class="container" id="textinput">
+                                <input class="form-control input-md"  id="inputmd" type="text"  placeholder="title" aria-label="Search">
+                                  <div role="button" class="btn " style="margin: -39px; margin-left: 386px"><span class="glyphicon glyphicon-ok-circle"></span></div>
+                                  <div role="button" class="btn " style="margin: -40px; margin-left: 430px"><span class="glyphicon glyphicon-pencil"></span></div>
+                                  <div role="button" class="btn " style="margin: -39px; margin-left: 471px"><span class="glyphicon glyphicon-picture"></span></div>
+                                  <textarea name="take a note" id="text" placeholder="take a note.."></textarea>
+                                  <div role="button" class="btn " style="margin: 7px; margin-left: 46px" aria-label="Remind me" aria-disabled="false" style="user-select: none;"><span class="glyphicon glyphicon-bell"></span></div>
+                                  <div role="button" class="btn " style="margin: -28px; margin-left: -39px" aria-label="Collaborator"><span class="glyphicon glyphicon-user"></span></div>
+                                  <div role="button" class="btn " style="margin: -39px; margin-left: -1px"><span class="glyphicon glyphicon-erase"></span></div>
+                                  <div role="button" class="btn " style="margin: -39px; margin-left: 8px"><span class="glyphicon glyphicon-picture"></span></div>
+                                  <div role="button" class="btn " style="margin: -39px; margin-left: 8px"><span class="glyphicon glyphicon-save"></span></div>
+                                  <div role="button" class="btn " style="margin: -39px; margin-left: 8px"><span class="glyphicon glyphicon-pushpin"></span></div>
+
+
+
+
+
+                                     <!--<div class="dropMenu">-->
+                                        <!--<span class="trigger" input class="form-control input-md"  id="inputmd" type="text"  placeholder="Take a note..." aria-label="Search">-->
+                                             <!--<div role="button" class="btn " style="margin: 1px; margin-left: 313px"><span class="glyphicon glyphicon-ok-circle"></span></div>-->
+                                              <!--<div role="button" class="btn " style="margin: -45px; margin-left: 354px"><span class="glyphicon glyphicon-pencil"></span></div>-->
+                                              <!--<div role="button" class="btn " style="margin: -45px; margin-left: 396px"><span class="glyphicon glyphicon-picture"></span></div>-->
+                                        <!--</span>-->
+
+                                         <!--<div class="panel">-->
+                                             <!--<form>-->
+                                                <!--<div class="form-group" contenteditable="true">-->
+                                                    <!--Take a note...-->
+                                                  <!--&lt;!&ndash;<textarea class="form-control" rows="5" id="comment">Take a notes</textarea>&ndash;&gt;-->
+                                                <!--</div>-->
+                                              <!--</form>-->
+                                         <!--</div>-->
+                                  <!--<div class="container" id="textinput">-->
+                                                 <!--<script>-->
+                                                        <!--function show() {-->
+                                                            <!--if(document.getElementById('benefits').style.display=='none') {-->
+                                                                <!--document.getElementById('benefits').style.display='block';-->
+                                                            <!--}-->
+                                                            <!--return false;-->
+                                                        <!--}-->
+                                                        <!--function hide() {-->
+                                                            <!--if(document.getElementById('benefits').style.display=='block') {-->
+                                                                <!--document.getElementById('benefits').style.display='none';-->
+                                                            <!--}-->
+                                                            <!--return false;-->
+                                                        <!--}-->
+                                                   <!--</script>-->
+
+
+                                             <!--<div id="opener"><a href="#1" name="1" onclick="return show();"><input class="form-control input-md"  id="inputmd" type="text"  placeholder="Take a note..." aria-label="Search">-->
+                                                  <!--<div role="button" class="btn " style="margin: -40px; margin-left: 313px"><span class="glyphicon glyphicon-ok-circle"></span></div>-->
+                                              <!--<div role="button" class="btn " style="margin: -41px; margin-left: 354px"><span class="glyphicon glyphicon-pencil"></span></div>-->
+                                              <!--<div role="button" class="btn " style="margin: -41px; margin-left: 396px"><span class="glyphicon glyphicon-picture"></span></div>-->
+                                         <!--</span></a></div>-->
+                                                <!--<div id="benefits" style="display:none;">-->
+                                                       <!--<div id="upbutton"><a onclick="return hide();">-->
+                                                           <!--<form>-->
+                                                               <!--&lt;!&ndash;<div class="form-group" contenteditable="true">&ndash;&gt;-->
+                                                               <!--&lt;!&ndash;Take a note...&ndash;&gt;-->
+                                                           <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                                                               <!--<textarea name="take a note" id="text" placeholder="take a note.."></textarea>-->
+                                                           <!--</form>-->
+
+                                                       <!--</a></div>-->
+                                                <!--</div>-->
+                                     <!--</div>-->
+
+                             </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+</header>
+
+
+    <!--&lt;!&ndash;<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>&ndash;&gt;-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>-->
+    <!--&lt;!&ndash;<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>&ndash;&gt;-->
+
+</body>
+</html>
+
+
