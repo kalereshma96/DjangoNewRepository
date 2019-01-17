@@ -1,3 +1,4 @@
+//for toggle
 $(document).ready(function(){
 
  $("#menu-toggle").click(function(e) {
@@ -8,71 +9,43 @@ $(document).ready(function(){
     });
 
 });
-//
-//$(document).ready(function(){
-//    $("#myModal").click('shown.bs.modal', function(){
-//        $(this).find('input[type="text"]').toggle();
-//    });
-//});
 
-//
-//$(document).ready(function() {
-//     $("#show_hide").click(function () {
-//     $("#toggle_tst").toggle()
-//  });
-//  });
+//for take a note hide and show
+$(document).ready(function(){
+    var timeKeeper;
 
-$(function() {
+    $('#menu').click(function()
+    {
+        $('#menu ul').show();
+    });
 
-    initDropDowns($("div.dropMenu"));
+    $('#menu ul').click(function()
+    {
+        clearTimeout(timeKeeper);
+    });
+
+    $('#menu').focusout(function()
+    {
+        timeKeeper = setTimeout(function() {$('#menu ul').hide()}, 150);
+    });
+
+    $('#menu').attr('tabIndex', -1);
+    $('#menu ul').hide();
 
 });
 
-function initDropDowns(allMenus) {
+// for more options dropdown
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
 
-    allMenus.children(".trigger").on("click", function(e) {
 
-        e.stopPropagation();
-
-        var thisTrigger = jQuery(this),
-            thisMenu = thisTrigger.parent(),
-            thisPanel = thisTrigger.next();
-
-        if (thisMenu.hasClass("open")) {
-
-            thisMenu.removeClass("open");
-
-            jQuery(document).off("click");
-
-        } else {
-
-            allMenus.removeClass("open");
-            thisMenu.addClass("open");
-
-            jQuery(document).on("click", function() {
-                allMenus.removeClass("open");
-            });
-        }
+$(document).ready(function(){
+    $('#gear').click(function(){
+       $('#dropdown').toggle();
     });
-}
-
-//$('#email-signup').click(function(e){
-//e.stopPropagation();});
-//$("#email-signup-link").click(function(e) {
-//    e.preventDefault();
-//    e.stopPropagation();
-//    $('#email-signup').show();
-//});
-//$(document).click(function() {
-//    $('#email-signup').hide();
-//});
-
-
-$(function(){
-  $('#demo').on('hide.bs.collapse', function () {
-    $('#button').html('<span class="glyphicon glyphicon-collapse-down"></span> Show');
-  })
-  $('#demo').on('show.bs.collapse', function () {
-    $('#button').html('<span class="glyphicon glyphicon-collapse-up"></span> Hide');
-  })
-})
+});
