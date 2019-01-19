@@ -29,15 +29,14 @@ ul {
 }
 
 .content-section {
-    background: #ffffff;
+ background: #ffffff;
     padding: 35px 108px;
-    border: 1px solid #101010;
+    border: 1px solid #9e9c9c;
     border-radius: 3px;
     margin-bottom: 80px;
-    margin-right: -8px;
-    margin-left: 26px;
+    margin-right: -224px;
+    margin-left: 110px;
     margin-top: 20px;
-}
 
 #btn {
     border: none;
@@ -161,14 +160,20 @@ a.article-title:hover {
 .btn{
 
    border:none;
-   width:60px;
+   width:92px;
    height:44px;
    color:gray;
    background-color: white;
    background: transparent;
    font: normal 16px Roboto,sans-serif;
-   margin-top: 1px;
-   margin-left: 16px;
+   margin-top: -9px;
+   margin-left: -10px;
 
 }
-/* sidebar*/
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    margin-left: 110px;
+    width: 722px;
+}

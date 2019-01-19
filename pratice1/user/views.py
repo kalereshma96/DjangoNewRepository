@@ -42,11 +42,11 @@ def register(request):
             to_email = form.cleaned_data.get('email')
             email = EmailMessage(mail_subject, message, to=[to_email])
             email.send()
-            return HttpResponse('Please confirm your email address to complete the registration.')
+            messages.success(request, 'Please confirm your email address to complete the registration.')
             # form.save()
             # username = form.cleaned_data.get('username')
             # messages.success(request, 'Your account has been created! You are now able to log in')
-            # return redirect('login')
+            return redirect('register')
     else:
         form = UserRegisterForm()
     return render(request, 'user/register.html', {'form': form})
@@ -130,14 +130,19 @@ def activate(request, uidb64, token):
             particular account.
     """
     try:
+        # takes user id and generates the base64 code
         uid = force_text(urlsafe_base64_decode(uidb64))
+        # get user for given uid
         user = User.objects.get(pk=uid)
     except(TypeError, ValueError, OverflowError, User.DoesNotExist):
         user = None
+        # check user is not null and has a token
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
         login(request, user)
-        return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
+        messages.success(request, 'Thank you for your email confirmation. Now you can login your account.')
+        return redirect('login')
     else:
-        return HttpResponse('Activation link is invalid!')
+        messages.success(request, 'Activation link is invalid!.')
+        return redirect('login')
