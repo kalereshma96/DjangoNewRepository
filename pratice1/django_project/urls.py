@@ -21,6 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from user import views as user_views
 from django.conf.urls import url
+from blog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -51,6 +52,7 @@ urlpatterns = [
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         user_views.activate, name='activate'),
     path('', include('blog.urls')),
+    url('create/', views.create_note, name='create_note'),
 
 ]
 

@@ -1,0 +1,47 @@
+{% extends "blog/base.html" %}
+{% block card_note %}
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 card grid-item">
+  <div class="thumbnail">
+    <div class="caption">
+        <h2><a href="{% url 'note_edit' post.pk %}" data-toggle="modal" data-target="#myModal">
+        {{ post.title }}</a></h2>
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+        </div>
+      </div>
+    <p>{{ post.description }}</p>
+
+    <div class="lable_div" id="ldiv_id">{{post.label}}</div>
+
+    <div class="caption card-footer">
+      <ul class="list-inline">
+          <medium><a href="{% url 'note_delete' post.pk %}" data-toggle="modal" data-target="#deleteModal">Delete</a></medium>
+              <div id="deleteModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+              </div>
+            </div>
+          <medium><a href="{% url 'note_pinned' post.pk %}">Pin</a></medium>
+          <medium><a href="{% url 'note_archived' post.pk %}" >Archive</a></medium>
+          <medium><a href="{% url 'note_lable' post.pk %}" data-toggle="modal" data-target="#lableModal">Lable</a></medium>
+              <div id="lableModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+              </div>
+            </div>
+          <medium><a href="{% url 'note_reminder' post.pk %}">Reminder</a> </medium>
+          <medium><a href="{% url 'note_collaborate' post.pk %}" >colaborate</a></medium>
+        {# <li><i class="fa fa-user"></i></li> #}
+      </ul>
+    </div>
+  </div>
+  </div>
+</div>
+{% endblock %}

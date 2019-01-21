@@ -597,16 +597,16 @@ a.article-title:hover {
    background: transparent;
    font: normal 16px Roboto,sans-serif;
    background: rgba(249, 246, 228, 0.04);
-   margin-top: -62px;
+   margin-top: -83px;
    margin-left: 246px;
    border-color: lightgray;
    padding-left: 80px;
    }
 
 /*for class*/
-.fundooTitle{
+/*.fundooTitle{
    margin-left:-38px;
-}
+}*/
 
 .btn{
 
@@ -733,7 +733,7 @@ margin-left: -39px;
 
 #fundootitle{
      margin: -40px;
-    color: #656461;
+     color: #656461;
 
 }
 
@@ -903,7 +903,7 @@ margin-left: 4px;
     border:none;
     margin-left: -48px;
     width: 550px;
-    margin-top: -2px;
+    margin-top: -126px;
 
 }
 
@@ -959,3 +959,7 @@ float: left; width: 20%;
  border-right: 1px dotted #CCC;
   border-bottom: 1px dotted #CCC;
   padding: 20px; }
+
+  .dropdown-menu{    margin-left: 200px;
+    margin-top: -60px;
+  }
